@@ -5,7 +5,7 @@ public class Main {
 
     }
     static int randomOneDigit(){
-        return (int)(math.random * 9);
+        return (int)(math.random * 9 + 1);
     }
 
     static int randomTwoDigit(){
