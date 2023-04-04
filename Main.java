@@ -7,4 +7,8 @@ public class Main {
     static int randomOneDigit(){
         return (int)(math.random * 9);
     }
+
+    static int randomTwoDigit(){
+        return (int)(math.random * 99 + 1);
+    }
 }
