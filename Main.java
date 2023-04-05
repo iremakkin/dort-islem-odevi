@@ -30,6 +30,7 @@ public class Main {
 
         while (areAvailibleNumbersExist) {
 
+                System.out.println(" ");
                 System.out.print("select one of the numbers: ");
                 selectedNums[0] = input.nextInt();
                 System.out.println(" ");
@@ -37,7 +38,7 @@ public class Main {
                 selectedNums[1] = input.nextInt();
                 System.out.println(" ");
                 System.out.print("select an operator one of +,-,*,/");
-                operator = input.nextLine();
+                operator = input.next();
                 newNum = calculator(selectedNums[0], selectedNums[1], operator);
 
                 for (int i=0; i<6 ; i++){
@@ -62,16 +63,11 @@ public class Main {
                 System.out.println(" ");
                 System.out.print("numbers that left: ");
 
+                kalan = 0;
+
                 for (int i=0; i<6 ; i++){
                     if(availibleNums[i]!=0){
                         System.out.print(availibleNums[i]+ " ");
-                    }
-                }
-
-
-
-                for (int i=0; i<6 ; i++){
-                    if(availibleNums[i]!=0){
                         kalan++;
                     }
                 }
@@ -93,6 +89,7 @@ public class Main {
         System.out.println("the goal number: "+ threeDigitNum);
         finalGap = calculator(finalNum, threeDigitNum, "-");
         System.out.println("the gap between them is " + finalGap );
+        System.out.println(" ");
         if(finalGap < 9){
             System.out.println("YOU WON");
         } else if (finalGap > 9) {
@@ -105,7 +102,7 @@ public class Main {
 
     }
     static int randomOneDigit(){
-        return (int)(Math.random() * 10);
+        return (int)(Math.random() * 8) +1;
     }
 
     static int randomTwoDigit(){
