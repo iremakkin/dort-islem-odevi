@@ -5,11 +5,11 @@ public class Main {
 
     }
     static int randomOneDigit(){
-        return (int)(math.random * 9 + 1);
+        return (int)(math.random * 10);
     }
 
     static int randomTwoDigit(){
-        return (int)(math.random * 99 + 1);
+        return (int)(math.random * 9) * 10;
     }
 
     static int randomThreeDigit(){
