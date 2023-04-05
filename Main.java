@@ -1,4 +1,6 @@
+import java.util.Arrays;
 import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -30,16 +32,38 @@ public class Main {
 
         while (areAvailibleNumbersExist) {
 
+                Arrays.sort(availibleNums);
                 System.out.println(" ");
                 System.out.print("select one of the numbers: ");
                 selectedNums[0] = input.nextInt();
+
+                int res0 = Arrays.binarySearch(availibleNums, selectedNums[0]);
+                boolean test0 = res0 >= 0;
+                if (!test0) {
+                    System.out.println(" ");
+                    System.out.println("Unvalid Number");
+                    System.exit(-1);
+                }
+
                 System.out.println(" ");
                 System.out.print("select another number: ");
                 selectedNums[1] = input.nextInt();
+
+                int res1 = Arrays.binarySearch(availibleNums, selectedNums[1]);
+                boolean test1 = res1 >= 0;
+                if (!test1) {
+                    System.out.println(" ");
+                    System.out.println("Unvalid Number");
+                    System.exit(-1);
+                }
+
                 System.out.println(" ");
                 System.out.print("select an operator one of +,-,*,/");
                 operator = input.next();
                 newNum = calculator(selectedNums[0], selectedNums[1], operator);
+
+
+
 
                 for (int i=0; i<6 ; i++){
                     if(selectedNums[0] == availibleNums[i]){
