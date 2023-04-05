@@ -20,27 +20,23 @@ public class Main {
 
         int sonuc;
 
-        switch (operator){
-            case "+":
-                sonuc = n1 + n2;
-                break;
-            case "-":
-                if(n1 >= n2){
-                    sonuc = n1-n2;}
-                else sonuc = n2-n1;
-                break;
-            case "*":
-                sonuc = n1 * n2;
-                break;
-            case "/":
-                if(n1 >= n2){
-                    sonuc = (int)(n1/n2);}
-                else sonuc = (int)(n2/n1);
-                break;
-            default:
+        switch (operator) {
+            case "+" -> sonuc = n1 + n2;
+            case "-" -> {
+                if (n1 >= n2) {
+                    sonuc = n1 - n2;
+                } else sonuc = n2 - n1;
+            }
+            case "*" -> sonuc = n1 * n2;
+            case "/" -> {
+                if (n1 >= n2) {
+                    sonuc = (int) (n1 / n2);
+                } else sonuc = (int) (n2 / n1);
+            }
+            default -> {
                 System.out.println("Gecersiz secim");
                 sonuc = -1;
-                break;
+            }
         }
 
         return sonuc;
