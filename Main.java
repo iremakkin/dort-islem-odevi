@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.math.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,13 +31,13 @@ public class Main {
         while (areAvailibleNumbersExist) {
 
                 System.out.print("select one of the numbers: ");
-                selectedNums[0] = input.nextInt;
+                selectedNums[0] = input.nextInt();
                 System.out.println(" ");
                 System.out.print("select another number: ");
-                selectedNums[1] = input.nextInt;
+                selectedNums[1] = input.nextInt();
                 System.out.println(" ");
                 System.out.print("select an operator one of +,-,*,/");
-                operator = input.nextLine;
+                operator = input.nextLine();
                 newNum = calculator(selectedNums[0], selectedNums[1], operator);
 
                 for (int i=0; i<6 ; i++){
@@ -106,15 +105,15 @@ public class Main {
 
     }
     static int randomOneDigit(){
-        return (int)(math.random() * 10);
+        return (int)(Math.random() * 10);
     }
 
     static int randomTwoDigit(){
-        return (int) (math.random() * 9 + 1) * 10;
+        return (int) (Math.random() * 9 + 1) * 10;
     }
 
     static int randomThreeDigit(){
-        return (int) (math.random() * 899 + 100);
+        return (int) (Math.random() * 899 + 100);
     }
 
 
