@@ -106,7 +106,7 @@ public class Main {
 
     }
     static int randomOneDigit(){
-        return (int)(math.random * 10);
+        return (int)(math.random() * 10);
     }
 
     static int randomTwoDigit(){
