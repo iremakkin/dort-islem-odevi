@@ -134,6 +134,7 @@ public class Main {
             default -> {
                 System.out.println("Unvalid choice");
                 sonuc = -1;
+                System.exit(-1);
             }
         }
 
