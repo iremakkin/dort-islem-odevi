@@ -1,5 +1,19 @@
 public class Main {
     public static void main(String[] args) {
+        String operator;
+        int[] oneDigitNum = new int[5];
+        int twoDigitNum = randomTwoDigit();
+        int threeDigitNum = randomThreeDigit();
+
+        for (int i=0; i<5; i++){
+           oneDigitNum[i] = randomOneDigit();
+            System.out.print(oneDigitNum[i] + " ");
+        }
+
+
+
+
+
 
 
 
@@ -34,7 +48,7 @@ public class Main {
                 } else sonuc = (int) (n2 / n1);
             }
             default -> {
-                System.out.println("Gecersiz secim");
+                System.out.println("Unvalid choice");
                 sonuc = -1;
             }
         }
