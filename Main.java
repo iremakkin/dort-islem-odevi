@@ -6,6 +6,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         String operator;
         int finalNum = 0;
+        int finalGap;
         int newNum;
         int kalan=0;
         int[] selectedNums = new int[2];
@@ -88,15 +89,19 @@ public class Main {
         }
 
 
-
-
-
-
-
-
-
-
-
+        System.out.println(" ");
+        System.out.println("the final number you found: "+ finalNum);
+        System.out.println("the goal number: "+ threeDigitNum);
+        finalGap = calculator(finalNum, threeDigitNum, "-");
+        System.out.println("the gap between them is " + finalGap );
+        if(finalGap < 9){
+            System.out.println("YOU WON");
+        } else if (finalGap > 9) {
+            System.out.println("YOU LOST");
+        } else {
+            System.out.println("CLOSE ENOUGH");
+        }
+        System.exit(-1);
 
 
     }
