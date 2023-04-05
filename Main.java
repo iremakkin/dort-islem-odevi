@@ -9,11 +9,11 @@ public class Main {
     }
 
     static int randomTwoDigit(){
-        return (int)(math.random * 9) * 10;
+        return (int) (math.random() * 9 + 1) * 10;
     }
 
     static int randomThreeDigit(){
-        return (int)(math.random * 999 + 1);
+        return (int) (math.random() * 899 + 100);
     }
 
     static int calculator(int n1, int n2, String operator){
