@@ -1,14 +1,33 @@
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         String operator;
+        int newNum;
+        int[] selectedNums = new int[2];
         int[] oneDigitNum = new int[5];
+        int[] availibleNums = new int[6];
         int twoDigitNum = randomTwoDigit();
         int threeDigitNum = randomThreeDigit();
 
+
+        availibleNums[0] = twoDigitNum;
+
         for (int i=0; i<5; i++){
            oneDigitNum[i] = randomOneDigit();
-            System.out.print(oneDigitNum[i] + " ");
+           availibleNums[i+1] = oneDigitNum[i];
+           System.out.print(oneDigitNum[i] + " ");
         }
+
+        boolean areAvailibleNumbersExist = true, userDidSelectRight = true;
+
+        System.out.println(twoDigitNum);
+        System.out.println("with these numbers, try to get close the number " + threeDigitNum + " using the operators of (+, - , *, /). ");
+
+
+
+
 
 
 
@@ -55,5 +74,6 @@ public class Main {
 
         return sonuc;
     }
+
 
 }
